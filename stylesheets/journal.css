@@ -1,0 +1,197 @@
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(180deg, #0c51c7 0%, #6bb5ff 100%);
+      min-height: 100vh;
+      color: #fff;
+      box-sizing: border-box;
+      
+    }
+    /* Левая панель навигации */
+.nav-left {
+  position: absolute;
+  top: 2vw;
+  left: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  font-size: 1.7vw;
+  letter-spacing: 0.2vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-left a {
+  color: #1a4ad8;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.7vw;
+}
+.logo-e {
+  font-weight: 600;
+}
+
+/* Правая панель навигации */
+.nav-right {
+  position: absolute;
+  top: 2vw;
+  right: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  display: flex;
+  gap: 3vw;
+  font-size: 1.3vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-right a {
+  color: #1a4ad8;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 1.3vw;
+  padding: 0 0.2vw;
+}
+.nav-right a:hover {
+  color: #0f2a7a;
+  text-decoration: underline;
+}
+    /* Журнал */
+    .magazine-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 2vw 4vw 0 4vw;
+      gap: 4vw;
+    }
+   
+    .magazine-img {
+    margin-top: 6vw;
+      object-fit: cover;
+      box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.07);
+      border-radius: 0.5vw;
+      margin-right: 2vw;
+      background: #eee;
+      display: block;
+    }
+    .magazine-btn {
+      position: absolute;
+      margin-top: -5.5vw;
+      margin-left: 48vw;
+      background: #1a4ad8;
+      color: #fff;
+      border: none;
+      border-radius: 0.8vw;
+      font-size: 1.2vw;
+      padding: 1vw 2vw;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      text-decoration: none;
+    }
+    .magazine-btn:hover {
+      background: #0c51c7;
+    }
+    .magazine-desc {
+      flex: 1;
+      font-size: 1.5vw;
+      line-height: 1.5;
+      margin-left: -3vw;
+      color: #fff;
+      margin-top: 6vw;
+    }
+    /* Центр: истории */
+    .stories-block {
+     
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .stories-img.img1 { 
+        position: absolute;
+    }
+
+    /* Кнопка "другие книги" */
+    .books-bar {
+      margin: 5vw 4vw 0 4vw;
+      background: #fff;
+      border-radius: 1vw;
+      padding: 1vw 2vw;
+      display: flex;
+      align-items: center;
+      font-size: 1.3vw;
+      color: #1a4ad8;
+      box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.07);
+    }
+    .books-bar input {
+      border: none;
+      background: transparent;
+      font-size: 1.3vw;
+      color: #1a4ad8;
+      flex: 1;
+      margin-left: 1vw;
+      outline: none;
+    }
+    /* Футер */
+    .footer {
+      background: #fff;
+      color: #1a4ad8;
+      border-radius: 1vw 1vw 0 0;
+      margin-top: 3vw;
+      padding: 2vw 4vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.1vw;
+      box-shadow: 0 -0.2vw 1vw rgba(0,0,0,0.07);
+    }
+    .footer-logo {
+      font-size: 2vw;
+      font-weight: 700;
+      color: #1a4ad8;
+    }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2vw;
+    }
+    .footer-links a {
+      color: #1a4ad8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #0c51c7;
+    }
+    @media (max-width: 800px) {
+      .header, .magazine-section, .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        height: auto;
+      }
+      .magazine-preview, .magazine-desc {
+        min-width: 80vw;
+        max-width: 90vw;
+      }
+      .stories-title {
+        font-size: 7vw;
+        padding: 2vw 2vw;
+      }
+      .books-bar {
+        font-size: 2.5vw;
+      }
+      .footer {
+        font-size: 2vw;
+      }
+    }
+  

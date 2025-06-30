@@ -1,0 +1,163 @@
+body {
+min-height: 100vh;
+font-family: 'Montserrat';
+background: url(../images/backgroundmain.png) no-repeat center center fixed;
+background-size: cover;
+color: #1a4ad8;
+
+height: 100%;
+ overflow: hidden;    
+}
+
+/* Левая панель навигации */
+.nav-left {
+  position: absolute;
+  top: 2vw;
+  left: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  font-size: 1.7vw;
+  letter-spacing: 0.2vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-left a {
+  color: #1a4ad8;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.7vw;
+}
+.logo-e {
+  font-weight: 600;
+}
+
+/* Правая панель навигации */
+.nav-right {
+  position: absolute;
+  top: 2vw;
+  right: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  display: flex;
+  gap: 3vw;
+  font-size: 1.3vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-right a {
+  color: #1a4ad8;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 1.3vw;
+  padding: 0 0.2vw;
+}
+.nav-right a:hover {
+  color: #0f2a7a;
+  text-decoration: underline;
+}
+
+/* Центральный блок */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 6vw;
+  box-sizing: border-box;
+}
+
+/* Заголовок */
+.main-titlem {
+  position: relative;
+  width: 100%;             
+  margin: 0 auto;
+  font-family: "ActayWide";
+  font-size: 20vw;
+  letter-spacing: -2.56px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: visible;
+}
+
+
+.text-contentm {
+    margin-top: 1.8vw;
+    margin-right: 1.5vw;
+  position: relative;
+  z-index: 1;          
+  color: #ffffff;
+  transform: rotate(2deg);
+ 
+}
+
+
+/* Подзаголовок */
+.subtitle {
+  font-size: 1.3vw;
+  color: #fff;
+  text-align: center;
+  max-width: 44vw;
+  margin-bottom: 2vw;
+  text-shadow: 0 0.2vw 0.6vw rgba(26,74,216,0.18);
+  line-height: 1.35;
+}
+
+/* Кнопка */
+.explore-btn {
+  display: inline-block;
+  font-size: 1.3vw;
+  padding: 1vw 3vw;
+  background: #fff;
+  color: #1a4ad8;
+  border: none;
+  border-radius: 1vw;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.06);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  margin-top: 0.5vw;
+
+}
+.arrow {
+  margin-left: 4vw;
+  font-size: 1.3vw;
+  vertical-align: baseline;
+  color: #1a4ad8;
+  transition: color 0.2s;
+}
+.explore-btn:hover {
+  background: #1a4ad8;
+  color: #fff;
+}
+.explore-btn:hover .arrow {
+  color: #fff;
+}
+.circle {
+  position: fixed;        
+  width: 90vw;
+  height: 90vw;
+  border-radius: 50%;
+  background: radial-gradient(#0061CF, #03002f);
+  mix-blend-mode: screen;  
+  margin-bottom: 20vw;
+  margin-left: -10vw;
+}
+
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 7vw;
+    padding: 2vw 2vw;
+  }
+  .subtitle, .explore-btn, .nav-left, .nav-right {
+    font-size: 3vw;
+  }
+  .subtitle {
+    max-width: 80vw;
+  }
+}

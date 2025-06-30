@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">                          
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="article">      
+    <meta property="og:url" content="{ссылка}">       <!-- ссылка на саму веб-страницу, которая добавляется в социальную сеть -->
+    <meta property="og:title" content="ITER">     <!-- название материала; -->
+    <meta property="og:description" content="текст">  <!-- описание материала, заполнять не обязательно; -->
+    <meta property="og:image" content="{картинка}">   <!-- ссылка на картинку, которая должна сопровождать материал; -->
+    <title>ITER</title> <!-- Write here your project name -->
+      <link rel="icon" href="././images/Subtract.svg"> <!-- отображаетмя в шапке - важно не забывать -->
+      <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+      <script src="javascripts/js.js" charset="utf-8"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: linear-gradient(180deg, #0c51c7 0%, #6bb5ff 100%);
+      min-height: 100vh;
+      color: #fff;
+      box-sizing: border-box;
+    }
+    /* Левая панель навигации */
+.nav-left {
+  position: absolute;
+  top: 2vw;
+  left: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  font-size: 1.7vw;
+  letter-spacing: 0.2vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-left a {
+  color: #1a4ad8;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.7vw;
+}
+.logo-e {
+  font-weight: 600;
+}
+
+/* Правая панель навигации */
+.nav-right {
+  position: absolute;
+  top: 2vw;
+  right: -1vw;
+  background: #fff;
+  border-radius: 0.5vw;
+  padding: 0.5vw 3vw;
+  display: flex;
+  gap: 3vw;
+  font-size: 1.3vw;
+  box-shadow: 0 0.3vw 1vw rgba(0,0,0,0.04);
+  z-index: 10;
+}
+.nav-right a {
+  color: #1a4ad8;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 1.3vw;
+  padding: 0 0.2vw;
+}
+.nav-right a:hover {
+  color: #0f2a7a;
+  text-decoration: underline;
+}
+    /* Журнал */
+    .magazine-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 2vw 4vw 0 4vw;
+      gap: 4vw;
+    }
+   
+    .magazine-img {
+    margin-top: 6vw;
+      object-fit: cover;
+      box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.07);
+      border-radius: 0.5vw;
+      margin-right: 2vw;
+      background: #eee;
+      display: block;
+    }
+    .magazine-btn {
+      position: absolute;
+      margin-top: -5.5vw;
+      margin-left: 48vw;
+      background: #1a4ad8;
+      color: #fff;
+      border: none;
+      border-radius: 0.8vw;
+      font-size: 1.2vw;
+      padding: 1vw 2vw;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      text-decoration: none;
+    }
+    .magazine-btn:hover {
+      background: #0c51c7;
+    }
+    .magazine-desc {
+      flex: 1;
+      font-size: 1.5vw;
+      line-height: 1.5;
+      margin-left: -3vw;
+      color: #fff;
+      margin-top: 6vw;
+    }
+    /* Центр: истории */
+    .stories-block {
+      margin: 4vw 0 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .stories-img.img1 { 
+        position: absolute;
+    }
+
+    /* Кнопка "другие книги" */
+    .books-bar {
+      margin: 5vw 4vw 0 4vw;
+      background: #fff;
+      border-radius: 1vw;
+      padding: 1vw 2vw;
+      display: flex;
+      align-items: center;
+      font-size: 1.3vw;
+      color: #1a4ad8;
+      box-shadow: 0 0.2vw 1vw rgba(0,0,0,0.07);
+    }
+    .books-bar input {
+      border: none;
+      background: transparent;
+      font-size: 1.3vw;
+      color: #1a4ad8;
+      flex: 1;
+      margin-left: 1vw;
+      outline: none;
+    }
+    /* Футер */
+    .footer {
+      background: #fff;
+      color: #1a4ad8;
+      border-radius: 1vw 1vw 0 0;
+      margin-top: 3vw;
+      padding: 2vw 4vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.1vw;
+      box-shadow: 0 -0.2vw 1vw rgba(0,0,0,0.07);
+    }
+    .footer-logo {
+      font-size: 2vw;
+      font-weight: 700;
+      color: #1a4ad8;
+    }
+    .footer-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5vw;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2vw;
+    }
+    .footer-links a {
+      color: #1a4ad8;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: #0c51c7;
+    }
+    @media (max-width: 800px) {
+      .header, .magazine-section, .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        height: auto;
+      }
+      .magazine-preview, .magazine-desc {
+        min-width: 80vw;
+        max-width: 90vw;
+      }
+      .stories-title {
+        font-size: 7vw;
+        padding: 2vw 2vw;
+      }
+      .books-bar {
+        font-size: 2.5vw;
+      }
+      .footer {
+        font-size: 2vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Левая панель -->
+  <div class="nav-left">
+    <a href="index.html"><span class="logo-e">E</span>iter</a>
+  </div>
+
+  <!-- Правая панель -->
+  <div class="nav-right">
+    <a href="about.html">о нас</a>
+    <a href="tours.html">туры</a>
+    <a href="journal.html">журнал</a>
+    <a href="merch.html">мерч</a>
+  </div>
+
+  <!-- Журнал -->
+  <div class="magazine-section">
+    <div class="magazine-preview">
+      <img class="magazine-img" src="././images/journal.svg" alt="Журнал ITER">
+      <a class="magazine-btn" href="#">
+        Читать номер <span style="font-size:2vw;">&#8594;</span>
+      </a>
+    </div>
+    <div class="magazine-desc">
+      Этот журнал — отражение пространства ITER, где переплетаются время, опыт и вдохновение. Каждый месяц выходит новый выпуск с обзорами событий, лайфхаками для путешествий во времени, рассказами о внутреннем устройстве мира и историями гостей, оставивших свой след.
+    </div>
+  </div>
+  <!-- Истории -->
+  <div class="stories-block" style="margin-bottom:5vw;">
+    <div class="stories-title" id="storiesTitle">
+      <img class="stories-img img1" src="././images/history.svg" alt="">
+     
+  </div>
+  <!-- Книги -->
+  <div class="books-bar">
+    Другие книги от ITER
+    <input type="text" placeholder="">
+  </div>
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-logo"><span class="logo-e">E</span>iter</div>
+    <div class="footer-info">
+      <div>Ракова Елизавета</div>
+      <div>524Д310</div>
+      <div>Куратор: Дарья Зародина</div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Телеграмм</a>
+      <a href="#">Портфолио</a>
+    </div>
+  </div>
+  <script>
+    // Инверсия цветов для заголовка "Истории, остающиеся с тобой"
+    const storiesTitle = document.getElementById('storiesTitle');
+    if (storiesTitle) {
+      storiesTitle.addEventListener('mouseenter', () => {
+        storiesTitle.classList.add('hovered');
+      });
+      storiesTitle.addEventListener('mouseleave', () => {
+        storiesTitle.classList.remove('hovered');
+      });
+    }
+  </script>
+</body>
+</html>
